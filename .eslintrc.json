@@ -1,0 +1,65 @@
+{
+  "plugins": ["react", "flowtype", "prettier", "react-hooks"],
+  // use config from prettier the react eslint plugin
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:flowtype/recommended",
+    "prettier",
+    "prettier/standard",
+    "prettier/react",
+    "prettier/flowtype"
+  ],
+  // enable jsx feature (see react jsx)
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "globals": {
+  },
+  // allow browser objects/functions
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "settings": {
+    "import/core-modules": [
+    ],
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"]
+      }
+    },
+    "react": {
+      "version": "16.8",
+      "flowVersion": "0.100"
+    }
+  },
+  // custom rules
+  // see here eslint.org/docs/rules for rules and options
+  "rules": {
+    "import/prefer-default-export": 0,
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    // allow errors and warnings
+    "no-console": [
+      "error",
+      {
+        "allow": ["warn", "error"]
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+[ignore]
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+suppress_comment= \\(.\\|\n\\)*\\$FlowIgnoreNext
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
+
+[strict]
+nonstrict-import
+unclear-type
+untyped-import
+untyped-type-import
+unsafe-getters-setters
+sketchy-null
